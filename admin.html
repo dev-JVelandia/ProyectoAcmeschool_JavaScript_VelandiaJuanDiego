@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel administrativo · Acme School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <ac-navbar mode="private"></ac-navbar>
+  <main id="contenido" class="container">
+    <h1 class="page-title">Panel administrativo</h1>
+    <div class="tabs" role="tablist" aria-label="Módulos">
+      <button role="tab" id="tab-exams" aria-controls="panel-exams" aria-selected="true">Exámenes</button>
+      <button role="tab" id="tab-users" aria-controls="panel-users" aria-selected="false" tabindex="-1">Usuarios</button>
+      <button role="tab" id="tab-results" aria-controls="panel-results" aria-selected="false" tabindex="-1">Resultados</button>
+    </div>
+    <section id="panel-exams" role="tabpanel" aria-labelledby="tab-exams"><ac-exam-manager></ac-exam-manager></section>
+    <section id="panel-users" role="tabpanel" aria-labelledby="tab-users" hidden><ac-user-manager></ac-user-manager></section>
+    <section id="panel-results" role="tabpanel" aria-labelledby="tab-results" hidden><ac-results-list></ac-results-list></section>
+  </main>
+  <ac-toast></ac-toast>
+  <script type="module" src="js/main-admin.js"></script>
+</body>
+</html>

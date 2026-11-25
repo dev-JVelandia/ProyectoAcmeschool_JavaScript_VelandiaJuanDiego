@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acme School · Exámenes en línea</title>
+  <meta name="description" content="Presenta tus exámenes de Acme School desde el navegador, sin crear cuenta.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <ac-navbar mode="public"></ac-navbar>
+  <main id="contenido" class="container">
+    <section id="intro" class="hero">
+      <h1>Elige tu examen y empieza</h1>
+      <p>No necesitas cuenta. Selecciona un examen, escribe tu identificación y tu nombre, y resuélvelo antes de que se acabe el tiempo.</p>
+    </section>
+    <ac-exam-list></ac-exam-list>
+    <ac-exam-taker hidden></ac-exam-taker>
+  </main>
+  <ac-toast></ac-toast>
+  <script type="module" src="js/main-public.js"></script>
+</body>
+</html>
